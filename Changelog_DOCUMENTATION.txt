@@ -1,0 +1,26 @@
+Changelog :
+
+Added Validation:
+ Implemented checks to ensure the expense amount is positive
+Embedded Database:
+ Integrated an SQLite database for data persistence.
+Modular / OOP Design: 
+Refactored the code to follow Object-Oriented Programming (OOP) principles and a modular design:
+
+MainWindow Class:
+ Responsible for rendering the main application window in Electron.
+ExpenseManager Class:
+ Handles all interactions with the embedded SQLite database, including adding, deleting, and retrieving expense records.
+Inter-Process Communication (IPC) File:
+ Created an IPC file for seamless communication between the main process and the renderer process.
+Preload Script:
+ Added a preload file to ensure secure communication between the main and renderer processes in Electron.
+
+Renderer Classes:
+
+ExpenseManager Class (Renderer):
+ Manages user actions in the interface, such as adding, deleting, and loading expense entries.
+UIManager Class: 
+Responsible for updating the user interface based on user interactions and changes in the data.
+Code Organization:
+ Each class and functionality is organized into its own file to maintain a clean and modular structure, improving code readability and maintainability.
