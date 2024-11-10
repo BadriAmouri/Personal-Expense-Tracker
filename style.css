@@ -34,13 +34,13 @@ h1 {
 .input-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
     margin-bottom: 20px;
     align-items: center;
     justify-content: space-between;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="date"], select {
     flex: 1;
     padding: 10px;
     font-size: 1em;
@@ -50,7 +50,7 @@ input[type="text"], input[type="number"] {
     transition: border 0.3s;
 }
 
-input[type="text"]:focus, input[type="number"]:focus {
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, select:focus {
     border: 1px solid #4CAF50;
 }
 
@@ -63,10 +63,34 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 10px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+div {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #333;
+}
+
+select {
+    width: auto;
 }
 
 table {
@@ -105,4 +129,14 @@ tbody tr:hover {
 
 .total span {
     color: #4CAF50;
+}
+
+button#prevPageBtn,
+button#nextPageBtn {
+    width: 48%;
+    margin-top: 10px;
+}
+
+button#prevPageBtn {
+    margin-right: 4%;
 }
